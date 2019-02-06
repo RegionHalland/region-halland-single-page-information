@@ -1,0 +1,13 @@
+{
+    "name": "regionhalland/region-halland-single-page-information",
+    "description": "Front-end-plugin som returnerar info om valfri sida",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roland Hydén",
+            "email": "Roland.Hyden@Regionhalland.se"
+        }
+    ],
+    "require": {}
+}
