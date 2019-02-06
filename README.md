@@ -51,7 +51,7 @@ OBS! Justera så att du hämtar aktuell version.
 ```
 
 
-## Loopa ut "sidorna" via "Blade"
+## Visa "sidans" innehåll via "Blade"
 
 ```sh
 @if(function_exists('get_region_halland_single_page_information'))
