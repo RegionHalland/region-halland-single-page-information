@@ -7,7 +7,7 @@ Nedan följer instruktioner hur du kan använda pluginet "region-halland-single-
 
 ## Användningsområde
 
-Denna plugin skapar ett objekt() som innehåller 
+Denna plugin skapar ett objekt() som innehåller all information om en valfri sida
 
 
 ## Installation och aktivering
