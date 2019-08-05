@@ -6,9 +6,9 @@
 	/*
 	Plugin Name: Region Halland Single Page Information
 	Description: Front-end-plugin som returnerar info om valfri sida
-	Version: 1.0.0
+	Version: 1.1.0
 	Author: Roland Hydén
-	License: MIT
+	License: GPL-3.0
 	Text Domain: regionhalland
 	*/
 
@@ -16,13 +16,14 @@
 	function get_region_halland_single_page_information($pageID) {
 		
 		// Hämta page information
-		$page 				= get_post($pageID);
+		$page = get_post($pageID);
 
 		// Lägg till sidans url
 		$page->url = get_page_link($page->ID);
 		
-		// Lägg till featured image url
-		$page->image_url 	= get_the_post_thumbnail_url($page->ID);
+		// Lägg till featured image url inklusive alt-text
+		$page->image_url = get_the_post_thumbnail_url($page->ID);
+		$page->image_alt = get_post_meta(get_post_thumbnail_id($page->ID), '_wp_attachment_image_alt', TRUE);
 
 		// Returnera page-array
 		return $page;

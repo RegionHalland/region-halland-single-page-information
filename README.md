@@ -10,6 +10,14 @@ Nedan följer instruktioner hur du kan använda pluginet "region-halland-single-
 Denna plugin skapar ett objekt() som innehåller all information om en valfri sida
 
 
+## Licensmodell
+
+Denna plugin använder licensmodell GPL-3.0. Du kan läsa mer om denna licensmodell via den medföljande filen:
+```sh
+LICENSE (https://github.com/RegionHalland/region-halland-single-page-information/blob/master/LICENSE)
+```
+
+
 ## Installation och aktivering
 
 ```sh
@@ -60,7 +68,10 @@ OBS! Justera så att du hämtar aktuell version.
     {{ $myPage->post_title }}
   </div>          
   <div>
-    {{ $myPage->post_content }}
+    {!! do_shortcode(wpautop($myPage->post_content)) !!}
+  </div>          
+  <div>
+    <img src="{{ $myPage->image_url }}" alt="{{ $myPage->image_alt }}">
   </div>          
 @endif
 ```
@@ -94,11 +105,16 @@ object(WP_Post)[6431]
   public 'post_mime_type' => string '' (length=0)
   public 'comment_count' => string '0' (length=1)
   public 'filter' => string 'raw' (length=3)
-  public 'url' => string 'http://exempel.se/startsida/' (length=28)
-  public 'image_url' => string 'http://exempel.se/app/uploads/2018/11/myImage.jpg' (length=49)
+  public 'image_url' => string 'http://exempel.se/startsida/' (length=28)
+  public 'image_alt' => string 'Min bild' (length=8)
 ```
 
 ## Versionhistorik
+
+### 1.1.0
+- Lagt till information om licensmodell
+- Bifogat fil med licensmodell
+- Alt-text för bild
 
 ### 1.0.0
 - Första version
